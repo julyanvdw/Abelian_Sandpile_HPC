@@ -5,11 +5,9 @@ This repository contains implementations of the **Abelian Sandpile Model** using
 > Note: execution time is noticeable depending on simulation size.
 
 ---
-## Example Output
-
-![Example output 1](./screenshots/srn1.png)
-![Example output 2](./screenshots/srn2.png)
-
+| Output 1 | Output 2 |
+|----------|----------|
+| ![Example output 1](./screenshots/srn1.png) | ![Example output 2](./screenshots/srn2.png) |
 ---
 
 ## MPI Implementation: Parallel Abelian Sandpile Simulation
