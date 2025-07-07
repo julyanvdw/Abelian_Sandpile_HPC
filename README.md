@@ -2,14 +2,19 @@
 
 This repository contains implementations of the **Abelian Sandpile Model** using both **serial** and **MPI-based parallel** approaches. These were developed as part of a high-performance computing project to study scalability and simulation efficiency.
 
-> Note: execution time is noticeable depending on simulation size. 
+> Note: execution time is noticeable depending on simulation size.
+
+---
+## Example Output
+
+![Example output 1](./screenshots/srn1.png)
+![Example output 2](./screenshots/srn2.png)
+
 ---
 
 ## MPI Implementation: Parallel Abelian Sandpile Simulation
 
 The MPI version of the simulation uses an **asynchronous, halo-exchanging approach** for parallelisation. It relies on **spatial decomposition**, splitting the simulation grid across MPI processes to distribute computation.
-
-### Parallelisation Strategy
 
 The problem space (`n × m`) is decomposed into **chunks** by dividing the grid according to the number of available processors (`p`). This is managed using an **MPI Cartesian topology**, which assigns chunks to processors in a structured grid layout.
 
@@ -21,15 +26,11 @@ Each chunk maintains four halo regions (top, bottom, left, right) to track overf
 
 ![Halo Buffers for Border Exchanges](./screenshots/algo2.png)
 
-### Halo Exchange and Synchronisation
-
 After each local computation round, halo buffers are **sent asynchronously** to neighboring chunks. When halos are received, the values are **applied to the corresponding border cells** in the chunk.
 
 This enables continued computation using up-to-date information from neighbors.
 
 ![Applying Received Halos](./screenshots/algo3.png)
-
-### Asynchronous Execution and Convergence
 
 This process is **asynchronous**: each chunk performs local computation, sends halos, receives updates, and continues computing—regardless of its neighbors' state.
 
@@ -38,6 +39,8 @@ This process is **asynchronous**: each chunk performs local computation, sends h
 - All chunks are locally stable (no more topplings required).
 
 At this point, each chunk is gathered and **stitched together** to form the final simulation output.
+
+--- 
 
 ##  Contents
 
