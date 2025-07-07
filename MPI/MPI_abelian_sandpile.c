@@ -442,7 +442,7 @@ int main(int argc, char** argv) {
         // Now global_array contains the full grid; print or save as needed
         //print_2d_array_to_file(global_array, ROWS, COLS);
 
-        //save_as_ppm("output.ppm", global_array);   
+        save_as_ppm("output.ppm", global_array);   
 
         // Free global_array when done
         for (int i = 0; i < ROWS; i++) {
