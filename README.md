@@ -2,6 +2,7 @@
 
 This repository contains implementations of the **Abelian Sandpile Model** using both **serial** and **MPI-based parallel** approaches. These were developed as part of a high-performance computing project to study scalability and simulation efficiency.
 
+> Note: execution time is noticeable depending on simulation size. 
 ---
 
 ##  Contents
