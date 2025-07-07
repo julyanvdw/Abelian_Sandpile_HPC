@@ -1,15 +1,6 @@
 # Parallel Abelian Sandpile Simulation
 
-This repository contains implementations of the **Abelian Sandpile Model** using both **serial** and **MPI-based parallel** approaches. These were developed as part of a high-performance computing assignment to study scalability and simulation efficiency.
-
->  **Note**: The OpenMP (OMP) implementation is **not included** in this repository.
-
----
-
-##  Authors
-
-- **Angelo Yang** — `YNGANG003`  
-- **Julyan van der Westh** — `VSWJUL003`
+This repository contains implementations of the **Abelian Sandpile Model** using both **serial** and **MPI-based parallel** approaches. These were developed as part of a high-performance computing project to study scalability and simulation efficiency.
 
 ---
 
@@ -17,7 +8,6 @@ This repository contains implementations of the **Abelian Sandpile Model** using
 
 - `SERIAL/` – Serial CPU implementation  
 - `MPI/` – Parallel implementation using MPI  
-- `HPC_Report.pdf` – Includes performance results, methodology, and analysis
 
 ---
 
@@ -49,4 +39,10 @@ MPI:
 
     Clean build artifacts by running:
         make clean
+
+##  Dependencies
+
+`mpicc` — MPI-enabled C compiler
+
+
 
