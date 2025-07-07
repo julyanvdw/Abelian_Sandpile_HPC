@@ -146,7 +146,7 @@ int main(int argc, char *argv[]) {
     double elapsed = (double)(end - start) / CLOCKS_PER_SEC;
     printf("%.6f\n", elapsed);
 
-    //save_as_ppm("output.ppm", array);
+    save_as_ppm("output.ppm", array);
     
     //print_2d_array(array, ROWS, COLS);
     
