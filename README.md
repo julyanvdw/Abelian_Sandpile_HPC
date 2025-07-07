@@ -42,7 +42,7 @@ MPI:
 
 ##  Dependencies
 
-`mpicc` — MPI-enabled C compiler
+`open-mpi` — MPI-enabled C compiler
 
 
 
